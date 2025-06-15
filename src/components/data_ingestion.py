@@ -7,7 +7,9 @@ from dataclasses import dataclass
 
 from src.exception import CustomException
 from src.logger import logging
+
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
 
 # dataclass - structured way to store data
 @dataclass
@@ -59,4 +61,10 @@ if __name__ == "__main__":
 
     # Data Transformation
     data_transforamation = DataTransformation()
-    data_transforamation.initiate_data_transformation(train_path,test_path)
+    train_arr, test_arr, _ = data_transforamation.initiate_data_transformation(train_path,test_path)
+
+    model_trainer = ModelTrainer()
+    rsquare_score = model_trainer.initiate_model_trainer(train_arr,test_arr)
+    print(rsquare_score)
+
+
