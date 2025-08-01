@@ -1,6 +1,8 @@
 # Basic Import
 import os
 import sys
+import mlflow
+import mlflow.sklearn
 from dataclasses import dataclass
 
 # Modelling
@@ -15,6 +17,9 @@ from xgboost import XGBRegressor
 from src.exception import CustomException
 from src.logger import logging
 from src.utils import save_object, evaluate_model
+
+mlflow.set_tracking_uri(uri="http://127.0.0.1:8000")
+mlflow.set_experiment(experiment_name="performance_indicator")
 
 @dataclass
 class ModelTrainerConfig:
@@ -101,6 +106,10 @@ class ModelTrainer:
             # ]
 
             best_model = models[best_model_name]
+            with mlflow.start_run():
+                mlflow.log_params(params[best_model_name])
+                mlflow.log_model(best_model, "best_model")
+                mlflow.log_metric("R2_Score", best_model_score)
 
             if best_model_score < 0.65:
                 raise CustomException("No Best model found")
