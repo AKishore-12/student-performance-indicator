@@ -1,4 +1,4 @@
-🧠 Student Performance Indicator
+## 🧠 Student Performance Indicator
 
 A machine learning project that predicts a student's math score based on demographic and academic information. It features an interactive web interface and supports MLflow for experiment tracking.
 
