@@ -1,8 +1,8 @@
-## 🧠 Student Performance Indicator
+# 🧠 Student Performance Indicator
 
 A machine learning project that predicts a student's math score based on demographic and academic information. It features an interactive web interface and supports MLflow for experiment tracking.
 
-📊 Dataset
+### 📊 Dataset
 
 The project uses the stud.csv dataset, which contains the following features:
 | Feature                       | Description                                          |
@@ -17,7 +17,7 @@ The project uses the stud.csv dataset, which contains the following features:
 | `math_score`                  | **Target variable** — math score (0-100)             |
 
 
-🗂️ Project Structure
+### 🗂️ Project Structure
 
 .
 ├── app.py                     # Flask backend
@@ -33,7 +33,7 @@ The project uses the stud.csv dataset, which contains the following features:
 ├── Dockerfile                # For containerization
 └── README.md                 # Project documentation
 
-⚙️ How It Works
+### ⚙️ How It Works
 
 • Users fill in student details via the web form.
 
@@ -41,7 +41,7 @@ The project uses the stud.csv dataset, which contains the following features:
 
 • The result is displayed on the webpage.
 
-🚀 Getting Started
+### 🚀 Getting Started
 
 1. Clone the Repository
 git clone <repo-url>
@@ -58,7 +58,7 @@ pip install -r requirements.txt
 python app.py
 Visit: http://localhost:8000
 
-🧪 MLflow Experiment Tracking
+### 🧪 MLflow Experiment Tracking
 
 This project integrates MLflow to track model training runs, hyperparameters, and performance metrics.
 
@@ -71,7 +71,7 @@ This project integrates MLflow to track model training runs, hyperparameters, an
 
 • Saved best model artifact
 
-📌 How to Use MLflow
+### 📌 How to Use MLflow
 
 1. Start MLflow UI
 mlflow ui --port 8000
@@ -95,13 +95,13 @@ Training the model (via script or notebook) will automatically log:
 
 • Track experiments over time
 
-🐳 Docker Support (Optional)
+### 🐳 Docker Support (Optional)
 
 To build and run the app with Docker:
 docker build -t student-performance .
 docker run -p 8000:8000 student-performance
 
-🖥️ Frontend Usage
+### 🖥️ Frontend Usage
 
 • Open the prediction page in the browser.
 
@@ -113,7 +113,7 @@ docker run -p 8000:8000 student-performance
 
 • View the predicted score instantly!
 
-📈 Model Training & Notebooks
+### 📈 Model Training & Notebooks
 
 • For in-depth data exploration and training logic, refer to:
 
@@ -121,7 +121,7 @@ docker run -p 8000:8000 student-performance
 
 • src/notebook/Model Training.ipynb
 
-📝 License
+### 📝 License
 
 This project is intended for educational and learning purposes only.
 
